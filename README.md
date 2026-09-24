@@ -367,6 +367,13 @@ own history where that happened.
    internet is enabled in notebook settings, or ImageNet weights are
    pre-cached from a pinned dataset (recommended — see Environment Setup).
 
+5. **Generation conditions on the class name.** The prompt is
+   `f"a chest x-ray showing {finding.lower()}"`, so the generator receives
+   class-name conditioning at inference. The *weights* are label-free
+   (zero-shot, never fine-tuned on VinDr labels); the estimator is not
+   entirely. Thesis §4.2 describes the estimator as label-free, which is
+   stronger than the prompt convention supports.
+
 ---
 
 ---
