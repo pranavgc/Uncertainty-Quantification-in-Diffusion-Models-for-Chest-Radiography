@@ -299,7 +299,7 @@ inside a lesion box in 0 of 150 images.
 > result rests on one LoRA training run and should not be cited until
 > replication completes.
 
-See [`extensions/README.md`](extensions/README.md) for the summary.
+See [`Extension/Extension_README.md`](Extension/Extension_README.md) for the summary.
 
 
 ## Reproducing the Figures and Tables
