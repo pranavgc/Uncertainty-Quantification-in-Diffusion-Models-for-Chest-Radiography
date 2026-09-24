@@ -55,6 +55,20 @@ replication that retracted one of the study's own significant findings
 │   ├── Mc Dropout logit/GradCam + DenseNet MC Dropout uncertainty generation/stage4-mc-dropout-logits.ipynb 
 │   ├── Seed Rep/Thresholdponse + Seed Replication and threshold dose study/seed-replication-and-threshold-response-stage-6.ipynb
 │   └── stage-7-densenet-evaluation + DenseNet evaluations/stage-7-densenet-evaluation.ipynb
+
+├── extensions/                         <- POST-THESIS work, not examined
+│   ├── README.md                       # overview + status
+│   ├── PREREGISTRATION_seed_replication.md
+│   ├── ext-dfinet-stage0.ipynb         #edge_correlation_baseline code
+│   ├── edge_correlation_baseline.csv   #stage 0 output
+│   ├── ext-dfint-step1-3.ipynb         #lora_training +scope_targets +generate_finetuned
+│   ├── ext-step9-11-evaluation.ipynb   #notebookD_analysis
+│   ├──# Below to be added#
+│   ├── metric_reproducibility_check.py
+│   ├── notebookD_analysis.py
+│   ├── multiseed_train_and_generate.py
+│   └── multiseed_analysis.py
+
 ──────────
 
 
@@ -272,6 +286,21 @@ pixel fell inside an annotated box in **zero** of 547 held-out test images
 across all five classes (Thesis §5.2).
 
 ---
+
+## Post-Thesis Extension
+
+Work carried out after submission, testing whether the edge-dominated
+uncertainty reported in the thesis is a domain-gap artifact or intrinsic
+to DDIM sampling. LoRA fine-tuning of the generator **increased**
+edge-dominance rather than reducing it, and peak variance still landed
+inside a lesion box in 0 of 150 images.
+
+> **Phase 2 (seed replication) in progress.** The Phase 1 Cardiomegaly
+> result rests on one LoRA training run and should not be cited until
+> replication completes.
+
+See [`extensions/README.md`](extensions/README.md) for the summary.
+
 
 ## Reproducing the Figures and Tables
 
